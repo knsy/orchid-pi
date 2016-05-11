@@ -9,8 +9,23 @@ echo "out" > /sys/class/gpio/gpio17/direction
 #display current value
 cat > /sys/class/gpio/gpio17/value
 
-#switch to 0
+#
+echo  "1" > sys/class/gpio/gpio17/value
+
+#switch to 0 for 5 sec
+for(( i=5 i>0; i-- )); do
+	sleep 1 &
+	wait
+done
+
 echo  "0" > sys/class/gpio/gpio17/value
 
+
+
 #switch to 1
+for(( i=5 i>0; i-- )); do
+	sleep 1 &
+	wait
+done
+
 echo  "1" > sys/class/gpio/gpio17/value
