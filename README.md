@@ -15,3 +15,13 @@ Further eventually, I'd like to use moisture/water sensors and have the system l
 
 
 Side-eventuallys: Web interface for tracking any faults/emergencies(i.e. pump broke), camera feed to see general state of orchids/system, redundancies(multiple pumps to vary flow rates to different orchids and a fallback if one breaks)
+
+
+## Install
+
+-add setupOrchid.sh to the root crontab.
+setupOrchid.sh initializes the pins and this requires su access.
+
+
+-add orchid.sh to the user crontab.
+orchid.sh does all the relay switching.
