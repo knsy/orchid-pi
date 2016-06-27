@@ -22,12 +22,12 @@ do
 	#so I kept this.
 	#this turns the relay on.
 	echo  "0" > /sys/class/gpio/gpio17/value
-	sleep 2 &
+	sleep 60 &
 	wait
 
-	#this turns the relay off.
+	#this turns the relay off for 20 minutes.
 	echo  "1" > /sys/class/gpio/gpio17/value
-	sleep 1 &
+	sleep 1200 &
 	wait
 
 	(( current+=1 ))
